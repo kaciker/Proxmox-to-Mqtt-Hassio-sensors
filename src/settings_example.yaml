@@ -1,33 +1,11 @@
 mqtt:
-  hostname: 127.0.0.1
-  port: 1234 #defaults to 1883
-  user: test
-  password: test
-deviceName: test
-client_id: test
-timezone: Europe/Brussels
-update_interval: 60 #Defaults to 60
-sensors:
-  temperature: true
-  clock_speed: true
-  disk_use: true
-  memory_use: true
-  cpu_usage: true
-  load_1m: true
-  load_5m: true
-  load_15m: true
-  net_tx: true
-  net_rx: true
-  swap_usage: true
-  power_status: true
-  last_boot: true
-  hostname: true
-  host_ip: true
-  host_os: true
-  host_arch: true
-  last_message: true
-  updates: true
-  wifi_strength: true
-  wifi_ssid: true
-  external_drives:
-    Drive1: /boot/
+  hostname: 192.168.8.85
+  port: 1883
+  user: mqttjuanma
+  password: xxxxxxx
+deviceName: proxmox
+client_id: proxmox
+timezone: Europe/Madrid
+update_interval: 60
+check_wifi_strength: false
+check_available_updates: false
