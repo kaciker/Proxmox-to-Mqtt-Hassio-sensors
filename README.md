@@ -24,13 +24,14 @@ It currently logs the following data:
 # System Requirements
 
 You need to have at least **python 3.6** installed to use System Sensors.
+If you have proxmox, you need to install "git" before to clone this rep, and not use SUDO.
 
 # Installation:
 
 1. Clone this repo >> git clone https://github.com/kaciker/Proxmox-to-Mqtt-Hassio-sensors.git
 2. cd system_sensors
 3. pip3 install -r requirements.txt
-4. sudo apt-get install python3-apt
+4. apt-get install python3-apt
 5. Edit settings_example.yaml in "~/system_sensors/src" to reflect your setup and save as settings.yaml:
 
 | Value                           | Required | Default | Description                                                                                                                                     |
@@ -47,12 +48,12 @@ You need to have at least **python 3.6** installed to use System Sensors.
 | update_interval                 | false    | 60      | The update interval to send new values to the MQTT broker                                                                                       |
 | sensors                         | false    | \       | Enable/disable individual sensors (see example settings.yaml for how-to). Default is true for all sensors.                                      |
 
-6. python3 src/system_sensors.py src/settings.yaml
+6. python3 system_sensors.py settings.yaml
 7. (optional) create service to autostart the script at boot:
    1. sudo cp example_system_sensors.service /etc/systemd/system/system_sensors.service
    2. edit the path to your script path and settings.yaml. Also make sure you replace pi in "User=pi" with the account from which this script will be run. This is typically 'pi' on default raspbian system.
-   3. sudo systemctl enable system_sensors.service
-   4. sudo systemctl start system_sensors.service
+   3. systemctl enable system_sensors.service
+   4. systemctl start system_sensors.service
 
 # Home Assistant configuration:
 
