@@ -23,7 +23,7 @@ It currently logs the following data:
 
 # System Requirements
 
-You need to have at least **python 3.6** installed to use System Sensors.
+You need to have at least **python 3.6** and **pip** installed to use System Sensors.
 If you have proxmox, you need to install "git" before to clone this rep, and not use SUDO.
 
 # Installation:
