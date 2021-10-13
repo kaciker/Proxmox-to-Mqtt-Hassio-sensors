@@ -50,7 +50,7 @@ If you have proxmox, you need to install "git" before to clone this rep, and not
 
 6. python3 system_sensors.py settings.yaml
 7. (optional) create service to autostart the script at boot:
-   1. sudo cp example_system_sensors.service /etc/systemd/system/system_sensors.service
+   1. cp example_system_sensors.service /etc/systemd/system/system_sensors.service
    2. edit the path to your script path and settings.yaml. Also make sure you replace pi in "User=pi" with the account from which this script will be run. This is typically 'pi' on default raspbian system.
    3. systemctl enable system_sensors.service
    4. systemctl start system_sensors.service
